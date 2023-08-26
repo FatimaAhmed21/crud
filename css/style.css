@@ -1,0 +1,18 @@
+input:focus{
+  border: none !important;
+  box-shadow: none !important;
+  background: #c5c5c5ef !important;
+  transform: scale(1.02);
+}
+.btn-main {
+    color: #fff ;
+    background-color: #57620e;
+    border-color: #899534;
+}
+
+.btn-main:hover{
+    background-color: #414a06 ;
+}
+.btn-main:focus {
+    box-shadow: none ;
+}

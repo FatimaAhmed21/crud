@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <<<BOOTSTRAP FILE>>> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <<<FONT-AWESOME FILE>>> -->
+    <link rel="stylesheet" href="css/font-awesome.all.min.css" />
+    <!-- <<<CSS FILE>>> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container text-white pt-4">
+      <div class="text-center">
+        <h1>CRUDS</h1>
+      <p>Create - Read - Update - Delete - Search</p>
+      </div>
+      <div class="inputs">
+        <input type="text" id="productTitle" class="form-control" placeholder="title">
+        <div class="row mt-2">
+          <div class="col">
+            <input class="form-control" onkeyup="getTotal()" placeholder="price" type="number" id="productPrice">
+          </div>
+          <div class="col">
+            <input class="form-control" onkeyup="getTotal()" placeholder="taxes" type="number" id="productTaxes">
+          </div>
+          <div class="col">
+            <input class="form-control" onkeyup="getTotal()" placeholder="ads" type="number" id="productAds">
+          </div>
+          <div class="col">
+            <input class="form-control" onkeyup="getTotal()" placeholder="discount" type="number" id="productDiscount">
+          </div>
+          <div class="col d-flex">
+            <span class="bg-success pt-2 px-2 rounded-1">Total : <small id="total"></small></span>
+          </div>
+        </div>
+        <input type="number" id="count" class="form-control mt-2" placeholder="count">
+        <input type="text" id="productCategory" class="form-control mt-2" placeholder="category">
+        <button class="btn btn-main w-100 mt-2" id="createBtn">Create</button>
+        <button class="btn btn-main w-100 mt-2 d-none" id="updateBtn">Save Updates</button>
+        <input onKeyUp="search(this.value)" type="text" id="searchInp" class="form-control mt-2" placeholder="search">
+        <div class="row mt-2">
+          <div class="col">
+            <button class="btn btn-main w-100" onclick="getSearchMood(this.id)" id="searchByTitle">
+              Search By Title
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-main w-100" onclick="getSearchMood(this.id)" id="searchByCategory">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <button class="btn btn-danger w-100 my-3" id="deleteAllBtn"></button>
+      </div>
+      <table class="table table-hover table-dark text-center mt-4">
+        <thead>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>PRICE</th>
+          <th>TAXES</th>
+          <th>ADS</th>
+          <th>DISCOUNT</th>
+          <th>TOTAL</th>
+          <th>CATEGORY</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tbody">
+          
+        </tbody>
+      </table>
+    </div>
+    <!-- <<<JS FILE>>> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
